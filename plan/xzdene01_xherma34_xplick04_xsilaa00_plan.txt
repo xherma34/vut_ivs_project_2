@@ -1,0 +1,49 @@
+_IVS_PROJEKT_2_PLAN
+
+- UKOLY
+	Repozitář
+	Zákl. matematická knihovna
+	Pokročilá matematická knihovna
+	GUI
+	Dokumentace (manuál atd.)
+	Installer
+	Licence
+	Cmake
+	Zapouzdření
+	Profiling (Vystup)
+	Hodnoceni
+	Testy X
+	Problemy.txt
+
+- TERMÍNY
+	18.03. - Plán, výběr prostředí a programovacích jazyků
+	21.03. - Inicializace repozitáře, Readme
+	26.03. - Vytvoření testů pro vývoj matematických knihoven, Cmake
+	02.04. - Implementace základní matematické knihovny
+	04.04. - Gui
+	06.04. - Implementace pokročilé matematické knihovny
+	10.04. - Profiling, manuální testování
+	15.04. - Zapouzdření, installer
+	20.04. - Testování celku, dokumentace, licence
+	25.04. - Odevzdání projektu 
+	27.04. - Sepsání problémů při projektu
+
+- ROZDĚLENÍ PRÁCE
+
+Xherma34 - Gui, správa repozitáře
+Xzdene01 - Profiling, back-end
+Xplick04 - Matematické knihovny, dokumentace, Cmake
+Xsilaa00 - Testy, installer
+
+- PROGRAMOVACÍ JAZYKY
+	C/C++, knihovna SDL
+
+- VÝVOJOVÉ PROSTŘEDÍ
+	Ubuntu 20.04.
+
+- KOMUNIKAČNÍ KANÁLY
+	Discord - Hlasový a textový kanál (konzultování projektu atd.)
+	Messenger - Textový kanál pro rychlou korespondenci
+
+- UMÍŠTĚNÍ REPOZITÁŘE
+	Github - https://github.com/xherma34/vut_ivs_project_2 
