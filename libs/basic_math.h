@@ -1,14 +1,23 @@
+/*
+ * @file        cal_code.cpp
+ * @author      Maxim Plicka, VUT FIT Brno, xplick04@fit.vutbr.cz
+ * @date        26.03.2021
+ *
+ * @brief       Implementace matematickych knihoven.
+ *
+ */
+
 #include <math.h>
 #include <stdexcept>
 
 double sum(const double num1, const double num2)
 {
-    return(num1 + num2);
+    return(num1+num2);
 }
 
 double sub(const double num1, const double num2)
 {
-    return(num1 - num2);
+    return(num1-num2);
 }
 
 double mul(const double num1, const double num2)
@@ -18,27 +27,26 @@ double mul(const double num1, const double num2)
 
 double div(const double num1, const double num2)
 {
-
-    if(num2 == 0)
+    if((num1 == 0) || (num2 == 0))
     {
         throw std::runtime_error("Can not divide ZERO");
     }
-
-    return (num1/num2);
+    else{
+        return(num1/num2);
+    }
 }
 
 int fac(double num1)
 {
+    //Kontrola prirozenych cisel
+    if(num1 - int(num1) != 0)
+    {
+        throw std::runtime_error("Musi byt prirozene cislo");
+    }
 
     int result = 1;
 
     int x = abs(num1);
-//
-//    if(num1 % 0 != 0)
-//    {
-//        throw std::runtime_error("Musi byt prirozene cislo");
-//        return (0);
-//    }
 
 
     if(num1 >= 0)
@@ -61,12 +69,21 @@ int fac(double num1)
 }
 
 
-double power(const double num1, const int num2)
+double power(const double num1, const double num2)
 {
-    return(pow(num1,num2));
+    //Kontrola prirozenych cisel
+    if(num2 - int(num2) != 0)
+    {
+        throw std::runtime_error("Musi byt prirozene cislo");
+    }
+
+    double result = pow(num1,num2);
+    return(result);
 }
 
 double rooting(const double num1, const double num2) {
+
+    double result;
 
     if (num2 <= 0) {
         throw std::runtime_error("Root must be > 0");
@@ -75,7 +92,7 @@ double rooting(const double num1, const double num2) {
     int x = int(num2);
     if((num2 - x) != 0)
     {
-        throw std::runtime_error("Root must be > 0");
+        throw std::runtime_error("Musi byt prirozene cislo");
     }
 
     if (num1 < 0)
@@ -84,9 +101,12 @@ double rooting(const double num1, const double num2) {
         {
             throw std::runtime_error("Doesnt exist");
         }
+
+        result = pow(abs(num1),1/num2);
+        return(result*(-1));
     }
 
-    double result = pow(num1,1/num2);
+    result = pow(num1,1/num2);
     return(result);
 }
 
