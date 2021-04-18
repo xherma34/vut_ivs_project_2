@@ -7,7 +7,7 @@
  *
  */
 
-#include "cal_code.cpp"
+#include "../src/math_lib.h"
 #include <gtest/gtest.h>
 
 TEST(Summation, IntValues)
