@@ -9,6 +9,7 @@
 
 #include <math.h>
 #include <stdexcept>
+//#include <guicalculator.cpp>
 
 /**
  * @brief Summarization of two numbers.
@@ -58,7 +59,8 @@ double div(const double num1, const double num2)
     ///Checking for dividing by zero.
     if(num2 == 0)
     {
-        throw std::runtime_error("Can not divide by zero.");
+        throw std::runtime_error("Cannot divide by zero.");
+        return 0;
     }
     else{
         return(num1/num2);
@@ -77,6 +79,7 @@ int fac(double num1)
     if(num1 - int(num1) != 0)
     {
         throw std::runtime_error("Must be natural number.");
+        return 0;
     }
 
     int result = 1;

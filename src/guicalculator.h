@@ -27,5 +27,6 @@ private slots:
     void facPressed();
     void helpPressed();
     void logPressed();
+    void changeSignPressed();
 };
 #endif // GUICALCULATOR_H

@@ -10,6 +10,7 @@ bool addBool = false;
 bool subBool = false;
 bool powerBool = false;
 bool sqrtBool = false;
+bool firstNum = false;
 
 GuiCalculator::GuiCalculator(QWidget *parent)
     : QMainWindow(parent)
@@ -57,6 +58,9 @@ GuiCalculator::GuiCalculator(QWidget *parent)
 
     //Help button
     connect(ui->helpButton, SIGNAL(released()), this, SLOT (helpPressed()));
+
+    //Change sign button
+    connect(ui->ChangeSign, SIGNAL(released()), this, SLOT (changeSignPressed()));
 }
 
 
@@ -73,10 +77,11 @@ void GuiCalculator::numberPressed()
     QString value = buttonPressed->text();
     QString displayValue = ui->Display->text();
 
-    if((displayValue.toDouble() == 0) || (displayValue.toDouble() == 0.0))
+    if(firstNum == false)
     {
         //rewrite number on display
         ui->Display->setText(value);
+        firstNum = true;
     }
     else
     {
@@ -102,6 +107,7 @@ void GuiCalculator::clearPressed()
     subBool = false;
     powerBool = false;
     sqrtBool = false;
+    firstNum = false;
     ui->Display->setText("0");
 }
 
@@ -114,6 +120,7 @@ void GuiCalculator::operationPressed()
     subBool = false;
     powerBool = false;
     sqrtBool = false;
+    firstNum = false;
 
     QPushButton * buttonPressed = (QPushButton *)sender();
     QString operatorPressed = buttonPressed->objectName();
@@ -166,7 +173,15 @@ void GuiCalculator::equalsPressed()
         }
         else if(divBool)
         {
-            num = div(ans, dblValue);
+            if(dblValue == 0)
+            {
+                ui->Display->setText("Syntax error");
+                return;
+            }
+            else
+            {
+                num = div(ans, dblValue);
+            }
         }
         else if(mulBool)
         {
@@ -174,11 +189,27 @@ void GuiCalculator::equalsPressed()
         }
         else if(powerBool)
         {
-            num = power(ans, dblValue);
+            if(dblValue - int(dblValue) != 0)
+            {
+                ui->Display->setText("Syntax error");
+                return;
+            }
+            else
+            {
+                num = power(ans, dblValue);
+            }
         }
         else if(sqrtBool)
         {
-            num = rooting(ans, dblValue);
+            if((dblValue <= 0) || (dblValue - int(dblValue) != 0) || (ans < 0 && int(dblValue) % 2 == 0))
+            {
+                ui->Display->setText("Syntax error");
+                return;
+            }
+            else
+            {
+                num = rooting(ans, dblValue);
+            }
         }
     }
     ui->Display->setText(QString::number(num));
@@ -188,19 +219,39 @@ void GuiCalculator::facPressed()
 {
     QString displayValue = ui->Display->text();
     double dblValue = displayValue.toDouble();
-    dblValue = fac(dblValue);
-    ui->Display->setText(QString::number(dblValue));
+    if(dblValue - int(dblValue) != 0)
+    {
+        ui->Display->setText("Syntax error");
+    }
+    else
+    {
+        dblValue = fac(dblValue);
+        ui->Display->setText(QString::number(dblValue));
+    }
 }
 
 void GuiCalculator::logPressed()
 {
     QString displayValue = ui->Display->text();
     double dblValue = displayValue.toDouble();
-    dblValue = ln(dblValue);
-    ui->Display->setText(QString::number(dblValue));
+    if(dblValue <= 0)
+    {
+        ui->Display->setText("Syntax error");
+    }
+    else
+    {
+        dblValue = ln(dblValue);
+        ui->Display->setText(QString::number(dblValue));
+    }
 }
 
-
+void GuiCalculator::changeSignPressed()
+{
+    QString displayValue = ui->Display->text();
+    double dblValue = displayValue.toDouble();
+    dblValue = dblValue * -1;
+    ui->Display->setText(QString::number(dblValue));
+}
 
 void GuiCalculator::helpPressed()
 {
