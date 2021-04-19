@@ -1,4 +1,6 @@
 
+###Vysoké učení technické v Brně - Fakulta Informačních Technologií
+
 ## Platforms
 Ubuntu 20.04
 
@@ -6,7 +8,7 @@ Ubuntu 20.04
 #### Tým: Zvonek dělá cink cink
 - xherma34 - Pavel Heřmann
 - xzdene01 - Jan Zdeněk
-- xsilaa00 - Alexander Sila 
+- xsilaa00 - Alexander Sila
 - xplick04 - Maxim Plička
 
 ## License
