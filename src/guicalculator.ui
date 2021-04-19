@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>GuiCalculator</string>
+   <string>ZDCC Calculator</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QBackground{
