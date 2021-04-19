@@ -1,8 +1,23 @@
+/*
+ * @file        guicalculator.cpp
+ * @author      Pavel Heřmann, xherma34, xherma34@fit.vutbr.cz, VUT FIT Brno
+ * @author      Jan Zdeněk, xzdene01, xzdene01@fit.vutbr.cz, VUT FIT Brno
+ * @date        26.03.2021
+ *
+ * @brief       Implementation of gui.
+ *
+ */
+
+
 #include "guicalculator.h"
 #include "ui_guicalculator.h"
 #include "helpwindow.h"
 #include "math_lib.h"
 
+/**
+ * @brief Help variables for functions.
+ * 
+ */
 double ans = 0.0;
 bool divBool = false;
 bool mulBool = false;
@@ -12,16 +27,21 @@ bool powerBool = false;
 bool sqrtBool = false;
 bool firstNum = false;
 
+/**
+ * @brief Construct a new Gui Calculator:: Gui Calculator object.
+ * 
+ * @param parent 
+ */
 GuiCalculator::GuiCalculator(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::GuiCalculator)
 {
     ui->setupUi(this);
 
-    //Display ans
+    ///Display ans.
     ui->Display->setText(QString::number(ans));
 
-    //setting numButtons
+    ///setting numButtons.
     connect(ui->Num0, SIGNAL(released()), this, SLOT (numberPressed()));
     connect(ui->Num1, SIGNAL(released()), this, SLOT (numberPressed()));
     connect(ui->Num2, SIGNAL(released()), this, SLOT (numberPressed()));
@@ -33,13 +53,13 @@ GuiCalculator::GuiCalculator(QWidget *parent)
     connect(ui->Num8, SIGNAL(released()), this, SLOT (numberPressed()));
     connect(ui->Num9, SIGNAL(released()), this, SLOT (numberPressed()));
 
-    //Delete&Clear
+    ///setting delete&Clear.
     connect(ui->clearButton, SIGNAL(released()), this, SLOT (clearPressed()));
 
-    //float button
+    ///setting float button.
     connect(ui->floatButton, SIGNAL(released()), this, SLOT (floatPressed()));
 
-    //operation
+    ///setting operation.
     connect(ui->addButton, SIGNAL(released()), this, SLOT (operationPressed()));
     connect(ui->subButton, SIGNAL(released()), this, SLOT (operationPressed()));
     connect(ui->mulButton, SIGNAL(released()), this, SLOT (operationPressed()));
@@ -47,30 +67,36 @@ GuiCalculator::GuiCalculator(QWidget *parent)
     connect(ui->powerButton, SIGNAL(released()), this, SLOT (operationPressed()));
     connect(ui->sqrtButton, SIGNAL(released()), this, SLOT (operationPressed()));
 
-    //fac
+    ///setting fac.
     connect(ui->facButton, SIGNAL(released()), this, SLOT (facPressed()));
 
-    //log
+    ///setting log.
     connect(ui->logButton, SIGNAL(released()), this, SLOT (logPressed()));
 
-    //Equals button
+    ///setting equals button.
     connect(ui->eqButton, SIGNAL(released()), this, SLOT (equalsPressed()));
 
-    //Help button
+    //setting help button.
     connect(ui->helpButton, SIGNAL(released()), this, SLOT (helpPressed()));
 
-    //Change sign button
+    //setting change sign button.
     connect(ui->ChangeSign, SIGNAL(released()), this, SLOT (changeSignPressed()));
 }
 
-
+/**
+ * @brief Destroy the Gui Calculator:: Gui Calculator object
+ * 
+ */
 GuiCalculator::~GuiCalculator()
 {
     delete ui;
 }
 
 
-//Display number pressed on diplsay
+/**
+ * @brief Number pressed on calculator handling.
+ * 
+ */
 void GuiCalculator::numberPressed()
 {
     QPushButton * buttonPressed = (QPushButton *)sender();
@@ -92,6 +118,10 @@ void GuiCalculator::numberPressed()
     }
 }
 
+/**
+ * @brief Float point number handling.
+ * 
+ */
 void GuiCalculator::floatPressed()
 {
     QString displayValue = ui->Display->text();
@@ -99,6 +129,10 @@ void GuiCalculator::floatPressed()
     ui->Display->setText(newValue);
 }
 
+/**
+ * @brief Clear button handling.
+ * 
+ */
 void GuiCalculator::clearPressed()
 {
     divBool = false;
@@ -111,9 +145,13 @@ void GuiCalculator::clearPressed()
     ui->Display->setText("0");
 }
 
+/**
+ * @brief Operation switch.
+ * 
+ */
 void GuiCalculator::operationPressed()
 {
-    //Clearing operation buttons
+    ///Clearing operation buttons.
     divBool = false;
     mulBool = false;
     addBool = false;
@@ -155,6 +193,10 @@ void GuiCalculator::operationPressed()
     ui->Display->setText("");
 }
 
+/**
+ * @brief Executing operations and getting result.
+ * 
+ */
 void GuiCalculator::equalsPressed()
 {
     double num = 0.0;
@@ -215,6 +257,10 @@ void GuiCalculator::equalsPressed()
     ui->Display->setText(QString::number(num));
 }
 
+/**
+ * @brief Factorial handling.
+ * 
+ */
 void GuiCalculator::facPressed()
 {
     QString displayValue = ui->Display->text();
@@ -230,6 +276,10 @@ void GuiCalculator::facPressed()
     }
 }
 
+/**
+ * @brief Natural logarithm handling.
+ * 
+ */
 void GuiCalculator::logPressed()
 {
     QString displayValue = ui->Display->text();
@@ -245,6 +295,10 @@ void GuiCalculator::logPressed()
     }
 }
 
+/**
+ * @brief Changing sign of a number via button on calculator.
+ * 
+ */
 void GuiCalculator::changeSignPressed()
 {
     QString displayValue = ui->Display->text();
@@ -253,6 +307,10 @@ void GuiCalculator::changeSignPressed()
     ui->Display->setText(QString::number(dblValue));
 }
 
+/**
+ * @brief Help pop up window.
+ * 
+ */
 void GuiCalculator::helpPressed()
 {
     helpWindow window;

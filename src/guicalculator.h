@@ -1,8 +1,22 @@
+/*
+ * @file        guicalculator.cpp
+ * @author      Pavel Heřmann, xherma34, xherma34@fit.vutbr.cz, VUT FIT Brno
+ * @author      Jan Zdeněk, xzdene01, xzdene01@fit.vutbr.cz, VUT FIT Brno
+ * @date        26.03.2021
+ *
+ * @brief       Implementation of gui.
+ *
+ */
+
 #ifndef GUICALCULATOR_H
 #define GUICALCULATOR_H
 
 #include <QMainWindow>
 
+/**
+ * @brief GuiCalculator init.
+ * 
+ */
 QT_BEGIN_NAMESPACE
 namespace Ui { class GuiCalculator; }
 QT_END_NAMESPACE
@@ -18,6 +32,7 @@ public:
 private:
     Ui::GuiCalculator *ui;
 
+///Calculator functions.
 private slots:
     void numberPressed();
     void clearPressed();
