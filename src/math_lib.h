@@ -1,5 +1,5 @@
-/*
- * @file        math_lib.cpp
+/**
+ * @file        math_lib.h
  * @author      Maxim Plicka, VUT FIT Brno, xplick04@fit.vutbr.cz, VUT FIT Brno
  * @date        26.03.2021
  *
@@ -12,10 +12,10 @@
 
 /**
  * @brief Summarization of two numbers.
- * 
- * @param num1 
- * @param num2 
- * @return double 
+ *
+ * @param num1
+ * @param num2
+ * @return double
  */
 double sum(const double num1, const double num2)
 {
@@ -24,10 +24,10 @@ double sum(const double num1, const double num2)
 
 /**
  * @brief Subtraction of two numbers.
- * 
- * @param num1 
- * @param num2 
- * @return double 
+ *
+ * @param num1
+ * @param num2
+ * @return double
  */
 double sub(const double num1, const double num2)
 {
@@ -36,10 +36,10 @@ double sub(const double num1, const double num2)
 
 /**
  * @brief Multiplication of two numbers.
- * 
- * @param num1 
- * @param num2 
- * @return double 
+ *
+ * @param num1
+ * @param num2
+ * @return double
  */
 double mul(const double num1, const double num2)
 {
@@ -48,10 +48,10 @@ double mul(const double num1, const double num2)
 
 /**
  * @brief Division of two nubmers.
- * 
- * @param num1 
- * @param num2 
- * @return double 
+ *
+ * @param num1
+ * @param num2
+ * @return double
  */
 double div(const double num1, const double num2)
 {
@@ -68,9 +68,9 @@ double div(const double num1, const double num2)
 
 /**
  * @brief Factorial of a number.
- * 
- * @param num1 
- * @return int 
+ *
+ * @param num1
+ * @return int
  */
 int fac(double num1)
 {
@@ -108,10 +108,10 @@ int fac(double num1)
 
 /**
  * @brief Power of num1 to num2.
- * 
- * @param num1 
- * @param num2 
- * @return double 
+ *
+ * @param num1
+ * @param num2
+ * @return double
  */
 double power(const double num1, const double num2)
 {
@@ -127,10 +127,10 @@ double power(const double num1, const double num2)
 
 /**
  * @brief Root of num1 to num2.
- * 
- * @param num1 
- * @param num2 
- * @return double 
+ *
+ * @param num1
+ * @param num2
+ * @return double
  */
 double rooting(const double num1, const double num2) {
 
@@ -167,9 +167,9 @@ double rooting(const double num1, const double num2) {
 
 /**
  * @brief Natural logarithm of num1.
- * 
- * @param num1 
- * @return double 
+ *
+ * @param num1
+ * @return double
  */
 double ln(const double num1)
 {

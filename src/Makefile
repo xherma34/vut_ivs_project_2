@@ -13,6 +13,7 @@ download:
 	sudo apt-get install -y qt5-qmake
 	sudo apt-get update -y
 	sudo apt install -y qt5-default
+	sudo apt-get install -y doxygen
 	sudo apt-get install libgtest-dev
 	sudo apt-get install cmake
 tests:
