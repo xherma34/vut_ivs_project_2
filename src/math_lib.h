@@ -1,5 +1,5 @@
-/*
- * @file        math_lib.cpp
+/**
+ * @file        math_lib.h
  * @author      Maxim Plicka, VUT FIT Brno, xplick04@fit.vutbr.cz, VUT FIT Brno
  * @date        26.03.2021
  *

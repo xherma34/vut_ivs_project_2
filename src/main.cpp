@@ -1,5 +1,5 @@
-/*
- * @file        guicalculator.cpp
+/**
+ * @file        main.cpp
  * @author      Pavel Heřmann, xherma34, xherma34@fit.vutbr.cz, VUT FIT Brno
  * @author      Jan Zdeněk, xzdene01, xzdene01@fit.vutbr.cz, VUT FIT Brno
  * @date        26.03.2021
