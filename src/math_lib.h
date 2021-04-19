@@ -1,6 +1,6 @@
 /*
- * @file        cal_code.cpp
- * @author      Maxim Plicka, VUT FIT Brno, xplick04@fit.vutbr.cz
+ * @file        math_lib.cpp
+ * @author      Maxim Plicka, VUT FIT Brno, xplick04@fit.vutbr.cz, VUT FIT Brno
  * @date        26.03.2021
  *
  * @brief       Implementation of math library.
@@ -9,7 +9,6 @@
 
 #include <math.h>
 #include <stdexcept>
-//#include <guicalculator.cpp>
 
 /**
  * @brief Summarization of two numbers.

@@ -5,7 +5,7 @@
 Ubuntu 20.04
 
 ## Contributors
-#### Tým: Zvonek dělá cink cink
+#### Team: Ring goes ding ding
 - xherma34 - Pavel Heřmann
 - xzdene01 - Jan Zdeněk
 - xsilaa00 - Alexander Sila
