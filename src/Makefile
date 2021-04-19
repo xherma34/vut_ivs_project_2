@@ -24,6 +24,6 @@ run:
 	cd "$(buildDir)" && ./GuiCalculator
 runtests:
 	cd "$(testsDir)" && ./c_test
-testsclean:
+cleantests:
 	cd "$(testsDir)" && rm CMakeCache.txt cmake_install.cmake c_test Makefile
 	cd "$(testsDir)" && rm -r CMakeFiles
