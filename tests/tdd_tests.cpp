@@ -1,15 +1,18 @@
 /**
- * @file        cal_tests.cpp
+ * @file        tdd_tests.cpp
  * @author      Alexander Sila, VUT FIT Brno, xsilaa00@fit.vutbr.cz
  * @date        26.03.2021
  *
- * @brief       Testovani matematickych knihoven.
+ * @brief       Math libraries tests
  *
  */
 
 #include "../src/math_lib.h"
 #include <gtest/gtest.h>
 
+/**
+ * @brief Summarization tests with different input integer values.
+ */
 TEST(Summation, IntValues)
 {
     //Positive Values
@@ -28,6 +31,9 @@ TEST(Summation, IntValues)
 
 }
 
+/**
+ * @brief Summarization tests with different input double values.
+ */
 TEST(Summation, DoubleValues)
 {
     double result;
@@ -60,6 +66,9 @@ TEST(Summation, DoubleValues)
 
 }
 
+/**
+ * @brief Substraction tests with different input integer values.
+ */
 TEST(Substraction, IntValues)
 {
     //Positive Values
@@ -79,6 +88,9 @@ TEST(Substraction, IntValues)
     EXPECT_EQ(-1113,sub(-816,297));
 }
 
+/**
+ * @brief Substraction tests with different input double values.
+ */
 TEST(Substraction, DoubleValues)
 {
     double result;
@@ -111,6 +123,9 @@ TEST(Substraction, DoubleValues)
     EXPECT_EQ(result,sub(-816.111,297.269));
 }
 
+/**
+ * @brief Multiplication tests with different input integer values.
+ */
 TEST(Multiplication, IntValues)
 {
     //Positive Values
@@ -131,6 +146,9 @@ TEST(Multiplication, IntValues)
 
 }
 
+/**
+ * @brief Multiplication tests with different input double values.
+ */
 TEST(Multiplication, DoubleValues)
 {
     double result;
@@ -164,6 +182,9 @@ TEST(Multiplication, DoubleValues)
 
 }
 
+/**
+ * @brief Division tests with different input integer values.
+ */
 TEST(Division, IntValues)
 {
     //Positive Values
@@ -181,6 +202,9 @@ TEST(Division, IntValues)
     EXPECT_EQ(-10921.0,div(43684.0,-4.0));
 }
 
+/**
+ * @brief Division tests with different input double values.
+ */
 TEST(Division, DoubleValues)
 {
     double result;
@@ -211,6 +235,9 @@ TEST(Division, DoubleValues)
     EXPECT_EQ(result, div(30.215,-86.365));
 }
 
+/**
+ * @brief Factorial tests with different input integer values.
+ */
 TEST(Factorial, AllIntValues)
 {
     //Positive Values
@@ -227,6 +254,9 @@ TEST(Factorial, AllIntValues)
     EXPECT_EQ(-1, fac(-1));
 }
 
+/**
+ * @brief Factorial tests with different input double values.
+ */
 TEST(Factorial, AllDoubleValues)
 {
     //Positive Values
@@ -238,6 +268,9 @@ TEST(Factorial, AllDoubleValues)
     EXPECT_ANY_THROW(fac(-4.1));
 }
 
+/**
+ * @brief Power tests with different input integer and double values.
+ */
 TEST(Power, AllValues)
 {
     //Positive Values
@@ -290,6 +323,9 @@ TEST(Power, AllValues)
     EXPECT_ANY_THROW(power(10.5,-5.2));
 }
 
+/**
+ * @brief Rooting tests with different input integer and double values.
+ */
 TEST(ROOT, AllValues)
 {
     double result;
@@ -329,6 +365,9 @@ TEST(ROOT, AllValues)
 
 }
 
+/**
+ * @brief Natural logarithm tests with different input integer and double values.
+ */
 TEST(ln, AllValues)
 {
     double result;
@@ -346,6 +385,9 @@ TEST(ln, AllValues)
 
 }
 
+/**
+ * @brief main() declaration.
+ */
 int main(int argc, char **argv)
 {
     testing::InitGoogleTest(&argc, argv);
