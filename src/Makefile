@@ -1,7 +1,7 @@
 currDir:=$(PWD)
 buildDir:=$(currDir)/build
 testsDir:=$(currDir)/../tests
-.PHONY: all download tests clean run runtests testsclean profile pack doc help
+.PHONY: all download tests clean run runtests cleantests doc docrun docclean profile pack help
 all:
 	if [ -d "$(buildDir)" ]; then make clean; fi
 	if [ ! -d "$(buildDir)" ]; then mkdir "$(buildDir)"; fi
@@ -28,3 +28,9 @@ runtests:
 cleantests:
 	cd "$(testsDir)" && rm CMakeCache.txt cmake_install.cmake c_test Makefile
 	cd "$(testsDir)" && rm -r CMakeFiles
+doc:
+	cd .. && doxygen doxyConfigFile
+docrun:
+	cd ../dokumentace/html/ && firefox index.html
+docclean:
+	cd ../dokumentace/ && rm -r html
