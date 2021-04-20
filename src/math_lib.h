@@ -48,7 +48,7 @@ double mul(const double num1, const double num2)
 
 /**
  * @brief Division of two nubmers.
- *
+ * @warning Cannot divide by zero
  * @param num1
  * @param num2
  * @return double
@@ -68,7 +68,7 @@ double div(const double num1, const double num2)
 
 /**
  * @brief Factorial of a number.
- *
+ * @warning Must be natural number
  * @param num1
  * @return int
  */
@@ -108,7 +108,7 @@ int fac(double num1)
 
 /**
  * @brief Power of num1 to num2.
- *
+ * @warning Must be natural number
  * @param num1
  * @param num2
  * @return double
@@ -127,7 +127,9 @@ double power(const double num1, const double num2)
 
 /**
  * @brief Root of num1 to num2.
- *
+ * @warning Must be natural number
+ * @warning Root must be greater than zero
+ * @warning Does not exist
  * @param num1
  * @param num2
  * @return double
@@ -167,7 +169,7 @@ double rooting(const double num1, const double num2) {
 
 /**
  * @brief Natural logarithm of num1.
- *
+ * @warning Root must be greater than zero
  * @param num1
  * @return double
  */
