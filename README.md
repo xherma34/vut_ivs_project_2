@@ -27,4 +27,4 @@ This program is distributed under a [GNU General Public License v3.0](LICENSE).
 ### Manual uninstalation
 1. Open terminal and execute 'sudo dpkg -r zdcc.deb'.
 ### Automatic uninstalation
-1. Double-click on downloaded debian package or find it in ubuntu software and remove through ubuntu software.
+1. Double-click on downloaded debian package or find it in your installed applications and remove through ubuntu software.
