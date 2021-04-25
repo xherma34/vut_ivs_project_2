@@ -14,4 +14,7 @@ Ubuntu 20.04
 ### License
 This program is distributed under a [GNU General Public License v3.0](LICENSE).
 
-## Instalace
+### Instalace
+1. Download debian package from 'installer' directory
+#### Automatic
+#### Manual
