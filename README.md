@@ -16,7 +16,7 @@ This program is distributed under a [GNU General Public License v3.0](LICENSE).
 
 ### Manual instalation
 1. Download debian package from 'installer' directory.
-2. Open terminal and execute 'sudo dpkg -i zdcc.deb'.
+2. Open terminal and execute $sudo dpkg -i zdcc.deb.
 3. Now you can open zdcc calculator from terminal by executing 'zdcc' or find it in applications.
 ### Automatic instalation
 1. Download debian package from 'installer' directory.
@@ -25,6 +25,6 @@ This program is distributed under a [GNU General Public License v3.0](LICENSE).
 4. Now you can open zdcc calculator from terminal by executing 'zdcc' or find it in applications.
 
 ### Manual uninstalation
-1. Open terminal and execute 'sudo dpkg -r zdcc'.
+1. Open terminal and execute $sudo dpkg -r zdcc.
 ### Automatic uninstalation
 1. Double-click on downloaded debian package or find it in your installed applications and remove through ubuntu software.
