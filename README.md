@@ -14,7 +14,12 @@ Ubuntu 20.04
 ### License
 This program is distributed under a [GNU General Public License v3.0](LICENSE).
 
-### Instalace
-1. Download debian package from 'installer' directory
-#### Automatic
-#### Manual
+### Manual instalation
+1. Download debian package from 'installer' directory.
+2. Open terminal and execute 'sudo dpkg -i zdcc.deb'.
+3. Now you can open zdcc calculator from terminal by executing 'zdcc' or find it in applications.
+### Automatic instalation
+1. Download debian package from 'installer' directory.
+2. Double-click on 'zdcc.deb'.
+3. Then install throu ubuntu software
+4. Now you can open zdcc calculator from terminal by executing 'zdcc' or find it in applications.
