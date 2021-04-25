@@ -22,3 +22,13 @@ This will create all necessary files for the execution of the tests aswell as th
 This will execute the executible for you
 ### To clean everything up type: $make cleantests
 This will delete all stuff created via $make tests such as header files, executable etc.
+### To create documentation type: $make doc
+This will create entire documentation to directory 'dokumentace'.
+### To open documentation type: $make docrun
+This will open documentation via firefox browser.
+### To clean documentation type: $make docclean
+This will clean entire documentation in directory 'dokumentace'.
+### To run profiling type: $make profile
+This will run profiling. After this follow instructions in terminal.
+### To clean profiling type: $profileclean
+This will clean files created by $make profile.
