@@ -1,0 +1,4 @@
+datum:	26.04.2021
+čas:	17:00:00
+způsob odevzdání:	do wisu v souboru .zip
+další soubory:	profiling, testy, doxygen dokumentace, user manual, mockup, installer, plan 

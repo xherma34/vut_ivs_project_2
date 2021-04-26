@@ -1,0 +1,4 @@
+xherma34 100 (GUI, backend)
+xzdene01 100 (profiling, backend)
+xsilaa00 100 (instalátor, testy)
+xplick04 100 (dokumentace, mat. knihovna)
